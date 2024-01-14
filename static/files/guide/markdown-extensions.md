@@ -4,7 +4,7 @@ title: Markdown Extensions
 # Markdown Extensions
 
 ### Callouts
-Zaui supports the recently introduced GitHub [Alerts markdown extension](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/).
+gitkitjs supports the recently introduced GitHub [Alerts markdown extension](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/).
 
 #### Examples
 > [!NOTE]

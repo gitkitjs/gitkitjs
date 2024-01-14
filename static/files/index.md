@@ -1,17 +1,17 @@
 ---
-appurl: https://zaui.zeroasic.com
-title: zaui
+appurl: https://gitkitjs.gitkitjs.dev
+title: gitkitjs
 
 icon:
   image: 💥
-  text: zaui
+  text: gitkitjs
 
 mobilemenu: false
 
 favicon: images/favicon.png
 
 hero:
-  name: zaui
+  name: gitkitjs
   text: SvelteKit powered static site generator
   tagline: Generate a website from markdown with minimal fuss.
   icon: 💥
@@ -19,7 +19,7 @@ hero:
     - text: Quickstart
       href: /guide/quickstart
     - text: GitHub
-      href: https://github.com/zeroasiccorp/zaui
+      href: https://github.com/gitkitjs/gitkitjs
 
 fullwidth: true
 
@@ -59,7 +59,7 @@ navlinks:
   - text: Blog
     href: /blog
   - text: GitHub
-    href: https://github.com/zeroasiccorp/zaui
+    href: https://github.com/gitkitjs/gitkitjs
     icon: GitHub
 
 sidebars:

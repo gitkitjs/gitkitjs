@@ -50,7 +50,7 @@ Custom components can replace any of the following component types.
 
 ## app.config
 
-To register your custom components with zaui, create `src/app.config.ts` (or .js) which imports your custom components, and exports them in an `AppConfig`.
+To register your custom components with gitkitjs, create `src/app.config.ts` (or .js) which imports your custom components, and exports them in an `AppConfig`.
 
 Here is an example from [jldec.me](https://github.com/jldec/jldec.me/blob/main/src/app.config.ts).
 

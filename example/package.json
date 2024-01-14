@@ -1,16 +1,20 @@
 {
-	"name": "example",
+  "name": "example",
   "private": true,
-	"scripts": {
-		"build": "zaui build",
-		"dev": "zaui dev"
-	},
-	"devDependencies": {
+  "scripts": {
+    "build": "gitkitjs build",
+    "dev": "gitkitjs dev"
+  },
+  "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
-    "@zeroasic/zaui": "^0.6.1",
+    "@gitkitjs/gitkitjs": "^1.0.0",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
   },
   "prettier": {
     "printWidth": 100,

@@ -48,5 +48,5 @@ On full-width displays, the sidebar is located next to the content.
 
 On narrower displays, the sidebar will overlay the content, and has to be opened and closed using the sidebar open/close button on the right.
 
-![screenshot with a narrow-screen sidebar, content shown](images/sidebar-narrow-show.png)
 ![screenshot with a narrow-screen sidebar, content hidden](images/sidebar-narrow-hide.png)
+![screenshot with a narrow-screen sidebar, content shown](images/sidebar-narrow-show.png)

@@ -12,18 +12,18 @@ See [jldec.me](https://github.com/jldec/jldec.me/) for an example.
 
 ## Prism
 
-The built-in prism.js highlighter is configured for a limited number of languages, and a dark themed stylesheet. The list of languages appears in the comment at the top of [/prism.js](https://github.com/zeroasiccorp/zaui/blob/main/static/prism.js) 
+The built-in prism.js highlighter is configured for a limited number of languages, and a dark themed stylesheet. The list of languages appears in the comment at the top of [/prism.js](https://github.com/gitkitjs/gitkitjs/blob/main/static/prism.js) 
 
-Here is an example of a yaml code block from [/blog/zaui-release](/blog/zaui-release).
+Here is an example of a yaml code block from [/blog/announcing-gitkitjs](/blog/announcing-gitkitjs).
 
 ```yaml
-title: Zaui, our npm-installable SvelteKit toolchain
+title: gitkitjs, our npm-installable SvelteKit toolchain
 author: Jürgen Leschner
 splash:
   image: images/daisy.jpg
-date: 2023-12-09
+date: 2024-01-14
 excerpt: |
-  We are pleased to announce the open source release of [zaui](https://github.com/zeroasiccorp/zaui), our npm-installable SvelteKit toolchain for building websites from markdown.
+  We are pleased to announce the open source release of [gitkitjs](https://github.com/gitkitjs/gitkitjs), our npm-installable SvelteKit toolchain for building websites from markdown.
 ```
 
 
@@ -33,7 +33,7 @@ You can download your own prism.js with a different selection of languages, or y
 Place the dowloaded prism files in `src/static/prism.js` or `src/static/prism.css`.
 
 > [!TIP]
-> Restart zaui after adding files to `src/static`.
+> Restart gitkitjs after adding files to `src/static`.
 
 ## Fonts
 

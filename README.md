@@ -1,13 +1,13 @@
-# zaui
+# gitkitjs
 Generate a website from markdown with a minimum of fuss.
 
-1. `pnpm install -D @zeroasic/zaui`
-2. `pnpm zaui dev`
+1. `pnpm install -D @gitkitjs/gitkitjs`
+2. `pnpm gitkitjs dev`
 3. Type `o` to open your browser.
 
-More details in the guide at [zaui.zeroasic.com](https://zaui.zeroasic.com/guide).
+More details in the guide at [gitkitjs.dev](https://gitkitjs.dev/guide).
 
-![zaui](https://github.com/zeroasiccorp/zaui/assets/849592/3e1c7a87-6669-411a-b4f7-77d9a7462b50)
+![gitkitjs](static/files/blog/images/gitkitjs.webp)
 
 ### This library provides
 
@@ -19,41 +19,34 @@ More details in the guide at [zaui.zeroasic.com](https://zaui.zeroasic.com/guide
 - Static publishing using the SvelteKit [static adapter](https://kit.svelte.dev/docs/adapter-static).
 - TypeScript
 
-### Coming soon
-
-- Contact and newsletter forms
-- User signup and authentication.
-
 ### Background
 
-The name 'zaui' originated from "Zero ASIC UI", where it powers the [zeroasic.com](https://www.zeroasic.com/) website.
-
-Inspiration for the developer experience of zaui came from [VitePress](https://vitepress.dev/). The main achitectural difference is that zaui can fetch and render markdown dynamically in the browser, similar to [docsify](https://docsify.js.org/#/?id=what-it-is).
+Inspiration for the developer experience of gitkitjs came from [VitePress](https://vitepress.dev/). The main achitectural difference is that gitkitjs can fetch and render markdown dynamically in the browser, similar to [docsify](https://docsify.js.org/#/?id=what-it-is).
 
 ### Installation
 Use npm, pnpm, or yarn. E.g.
 
-`pnpm install -D @zeroasic/zaui`
+`pnpm install -D @gitkitjs/gitkitjs`
 
 ### Usage
-- `zaui dev` launches a dev server to render a preview of the website while you edit content.
-- `zaui build` produces a static build of the website files.
+- `gitkitjs dev` launches a dev server to render a preview of the website while you edit content.
+- `gitkitjs build` produces a static build of the website files.
 
-The zaui project directory can be passed as an argument E.g. `zaui dev docs` when your zaui project lives in the `docs` subdirectory of your repo.
+The gitkitjs project directory can be passed as an argument E.g. `gitkitjs dev docs` when your gitkitjs project lives in the `docs` subdirectory of your repo.
 
 For non-global installs, these commands should be added as package.json scripts E.g.
 
 ```json
   "scripts": {
-    "dev": "zaui dev",
-    "build": "zaui build"
+    "dev": "gitkitjs dev",
+    "build": "gitkitjs build"
   }
 ```
 
 ### Directories
-You can override the default directories with env vars. More details in [zaui.js](bin/zaui.js)
+You can override the default directories with env vars. More details in [gitkit.js](bin/gitkit.js)
 
-- ZAUI_PROJECT_DIR defaults to current working directory, with other directories below that.
-- ZAUI_CONTENT_DIR is where markdown files live - defaults to `./content`
-- ZAUI_BUILD_DIR is where build output is written - defaults to  `./build`
-- ZAUI_SRC_DIR: is optional, where custom components live - defaults to `./src`
+- GITKITJS_PROJECT_DIR defaults to current working directory, with other directories below that.
+- GITKITJS_CONTENT_DIR is where markdown files live - defaults to `./content`
+- GITKITJS_BUILD_DIR is where build output is written - defaults to  `./build`
+- GITKITJS_SRC_DIR: is optional, where custom components live - defaults to `./src`

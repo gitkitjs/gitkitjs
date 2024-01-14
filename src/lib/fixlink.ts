@@ -19,6 +19,11 @@ export function fixlink(href:string, pageprefix:string = '', path:string = '') {
     prefix = pageprefix;
   }
 
+  // strip /index.md from page links
+  if (href.match(/\/index\.md$/i)) {
+    href = href.replace(/\/index\.md$/i, '');
+  }
+
   // strip .md extension from page links
   if (href.match(/\.md$/i)) {
     href = href.replace(/\.md$/i, '');

@@ -7,32 +7,32 @@ title: Install
 Use npm, pnpm, or yarn. E.g.
 
 ```sh
-pnpm install -D @zeroasic/zaui
+pnpm install -D @gitkitjs/gitkitjs
 ```
 
-Redistributing zaui as a dependency for redistribution in another npm package is not currently supported - but could be in the future ;-)
+Redistributing gitkitjs as a dependency for redistribution in another npm package is not currently supported - but could be in the future ;-)
 
 ## package.json
 
-For non-global installs, zaui commands should be added to your package.json scripts E.g.
+For non-global installs, gitkitjs commands should be added to your package.json scripts E.g.
 
 ```json
 {
   "name": "my-site",
   "private": true,
   "scripts": {
-    "dev": "zaui dev",
-    "build": "zaui build"
+    "dev": "gitkitjs dev",
+    "build": "gitkitjs build"
   },
   "devDependencies": {
-    "@zeroasic/zaui": "^0.5.1"
+    "@gitkitjs/gitkitjs": "^0.5.1"
   }
 }
 ```
 
 ## Custom components
 
-There is no need to install or configure SvelteKit, since that is included with zaui.
+There is no need to install or configure SvelteKit, since that is included with gitkitjs.
 
 ### VS Code
 

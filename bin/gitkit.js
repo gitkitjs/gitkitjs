@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// CLI for zaui
+// CLI for gitkitjs
 // Sets environment variables and launches vite dev/build/preview.
 // TODO: add support for other npm scripts (e.g. check, test...)
 
@@ -35,17 +35,17 @@ let pkg = JSON.parse(fs.readFileSync(path.join(packageDir, 'package.json'), 'utf
 
 // https://vitepress.dev/guide/routing#project-root
 // defaults to cwd
-// override with cli arg or ZAUI_PROJECT_DIR
-let projectDir = path.resolve('.', process.argv[3] ?? process.env.ZAUI_PROJECT_DIR ?? '');
+// override with cli arg or GITKITJS_PROJECT_DIR
+let projectDir = path.resolve('.', process.argv[3] ?? process.env.GITKITJS_PROJECT_DIR ?? '');
 
 // Similar to project-root/.vitepress directory
 // defaults to projectDir/src
-// override with ZAUI_SRC_DIR, resolved relative to projectDir
+// override with GITKITJS_SRC_DIR, resolved relative to projectDir
 // Optional:
 // - use app.config.js or app.config.ts for custom components
 // - use tailwind.config.js (note: cjs - not esm) for tailwind config
 // - restart dev server after creating directory or renaming config file.
-let srcDir = path.resolve(projectDir, process.env.ZAUI_SRC_DIR ?? 'src');
+let srcDir = path.resolve(projectDir, process.env.GITKITJS_SRC_DIR ?? 'src');
 if (!fs.existsSync(srcDir)) {
   srcDir = undefined;
 }
@@ -61,8 +61,8 @@ if (
 
 // https://vitepress.dev/guide/routing#source-directory
 // defaults to projectDir/content
-// override with ZAUI_CONTENT_DIR, resolved relative to projectDir
-let contentDir = path.resolve(projectDir, process.env.ZAUI_CONTENT_DIR ?? 'content');
+// override with GITKITJS_CONTENT_DIR, resolved relative to projectDir
+let contentDir = path.resolve(projectDir, process.env.GITKITJS_CONTENT_DIR ?? 'content');
 let contentDirExists = fs.existsSync(contentDir);
 if (!contentDirExists) {
   console.log(`No content directory found at ${contentDir} - using static files from package.`);
@@ -70,7 +70,7 @@ if (!contentDirExists) {
 }
 
 // Create staticDir in temp directory
-let staticDir = fs.mkdtempSync(path.join(os.tmpdir(), 'zaui-'));
+let staticDir = fs.mkdtempSync(path.join(os.tmpdir(), 'gitkitjs-'));
 // add staticDir/files
 fs.mkdirSync(path.join(staticDir, 'files'));
 // symlink contentDir/* into staticDir/files (not including dotted or static/*)
@@ -116,18 +116,18 @@ function overlayStaticDir(targetDir, staticDir, excludeList = []) {
 
 // https://kit.svelte.dev/docs/adapter-static#options-pages
 // defaults to projectDir/build
-// override with ZAUI_BUILD_DIR, resolved relative to projectDir
-let buildDir = path.resolve(projectDir, process.env.ZAUI_BUILD_DIR ?? 'build');
+// override with GITKITJS_BUILD_DIR, resolved relative to projectDir
+let buildDir = path.resolve(projectDir, process.env.GITKITJS_BUILD_DIR ?? 'build');
 
 // All directory paths should be fully resolved
 let env = {
-  ZAUI_PROJECT_DIR: projectDir,
-  ZAUI_CONTENT_DIR: contentDir,
-  ZAUI_BUILD_DIR: buildDir,
-  ZAUI_SRC_DIR: srcDir,
-  ZAUI_APPCONFIG_DIR: configDir,
-  ZAUI_STATIC_DIR: staticDir,
-  ZAUI_PACKAGE_DIR: packageDir,
+  GITKITJS_PROJECT_DIR: projectDir,
+  GITKITJS_CONTENT_DIR: contentDir,
+  GITKITJS_BUILD_DIR: buildDir,
+  GITKITJS_SRC_DIR: srcDir,
+  GITKITJS_APPCONFIG_DIR: configDir,
+  GITKITJS_STATIC_DIR: staticDir,
+  GITKITJS_PACKAGE_DIR: packageDir,
 };
 
 // Pass PUBLIC_* env vars for access via import from '$env/static/public'

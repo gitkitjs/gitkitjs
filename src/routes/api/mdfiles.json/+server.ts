@@ -1,6 +1,6 @@
 // Returns a map of md files at /api/mdfiles.json
 // The static adapter will prerender (this with some complaining)
-// This allows static builds to be hosted without a zaui server
+// This allows static builds to be hosted without a gitkitjs server
 export const prerender = true;
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
@@ -17,7 +17,7 @@ export const GET: RequestHandler = async ({ fetch }) => {
   // return json(await res.json());
 
   let files: string[] = [];
-  let prefix = process.env.ZAUI_CONTENT_DIR ?? path.join(cwd, 'static/files');
+  let prefix = process.env.GITKITJS_CONTENT_DIR ?? path.join(cwd, 'static/files');
   if (!fs.existsSync(prefix)) {
     console.log(`Content directory: '${prefix}' does not exist.`);
   } else {

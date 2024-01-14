@@ -29,13 +29,13 @@ let config = {
   plugins: [require('@tailwindcss/typography')],
 };
 
-// Merge user config from ZAUI_SRC_DIR if it exists
+// Merge user config from GITKITJS_SRC_DIR if it exists
 // TODO: make sure that the typography plugin features are available
 //       for Intelliesense inside the srcDir of a user package.
 //       If not, we may need to merge in the other direction
 
-let srcDir = process.env.ZAUI_SRC_DIR;
-let contentDir = process.env.ZAUI_CONTENT_DIR;
+let srcDir = process.env.GITKITJS_SRC_DIR;
+let contentDir = process.env.GITKITJS_CONTENT_DIR;
 
 if (srcDir) {
   content.push(path.join(srcDir, '**/*.{html,js,svelte,ts}'));

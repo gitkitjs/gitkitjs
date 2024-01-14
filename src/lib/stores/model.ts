@@ -115,7 +115,20 @@ function dateNum(date: any) {
   return (date ?? {}) instanceof Date ? date.valueOf() : 8e15;
 }
 
+function sortNum(sort: any) {
+  let n = Number(sort);
+  return Number.isNaN(n) ? Number.MAX_VALUE : n;
+}
+
 // intended for MarkdownFile[].sort(compareMDFDates)
 export function compareMDFDates(a: MarkdownFile, b: MarkdownFile) {
   return dateNum(b.frontmatter?.date) - dateNum(a.frontmatter?.date);
+}
+
+export function compareMDFSorts(a: MarkdownFile, b: MarkdownFile) {
+  return sortNum(a.frontmatter?.sort) - sortNum(b.frontmatter?.sort);
+}
+
+export function compareMD(a: MarkdownFile, b: MarkdownFile) {
+  return a.frontmatter?.sort ? compareMDFSorts(a, b) : compareMDFDates(a, b);
 }

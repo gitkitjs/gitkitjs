@@ -1,5 +1,5 @@
 ---
-title: Zaui Blog
+title: gitkitjs Blog
 ---
 
 # Blog

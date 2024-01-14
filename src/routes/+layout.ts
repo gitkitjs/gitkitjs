@@ -3,7 +3,7 @@ import { building } from '$app/environment';
 import { get } from 'svelte/store';
 import type { LoadEvent } from '@sveltejs/kit';
 import { loader } from '$lib/loader';
-import { model, compareMDFDates, type MarkdownFiles, type MarkdownFile } from '$lib/stores/model';
+import { model, compareMD, type MarkdownFiles, type MarkdownFile } from '$lib/stores/model';
 import { formatDate } from '$lib/formatDate';
 import { layoutComponents } from '$lib/componentMaps';
 import { PUBLIC_PRODUCTION } from '$env/static/public';
@@ -58,25 +58,35 @@ export async function load(evt: LoadEvent) {
       mdData.forEach((file) => {
         fileMap[file.filepath] = file;
         let names = file.filepath.split('/');
-        if (names.length > 1) {
-          dirMap['/' + names[0]] = []; // e.g. dirMap['/blog'] = []
+        let prefix = '';
+        while (names.length > 1) {
+          prefix += '/' + names.shift();
+          dirMap[prefix] = []; // e.g. dirMap['/blog'] = []
         }
       });
       // console.log('fileMap', Object.keys(fileMap));
 
       // populate dirMap with sorted list of files, and next/prev links
       Object.keys(dirMap).forEach((dir) => {
+        let prefix = dir.slice(1) + '/';
         dirMap[dir] = mdData
           .filter(
-            (f) => f.filepath.startsWith(dir.slice(1) + '/') && !f.filepath.endsWith('/index.md')
+            (f) =>
+              f.filepath.startsWith(prefix) &&
+              ((!/\//.test(f.filepath.slice(prefix.length)) && !f.filepath.endsWith('/index.md')) || // leaf file
+                /\/index.md/.test(f.filepath.slice(prefix.length))) // directory with index.md
           )
-          .sort(compareMDFDates);
+          .sort(compareMD);
         let len = dirMap[dir].length;
         for (let i = 0; i < len; i++) {
           dirMap[dir][i].next = dirMap[dir][i + 1] || dirMap[dir][0];
           dirMap[dir][i].prev = dirMap[dir][i - 1] || dirMap[dir][len - 1];
         }
       });
+      // console.log(
+      //   'dirMap',
+      //   Object.keys(dirMap).map((dir) => ({ [dir]: dirMap[dir].length }))
+      // );
 
       // extract config from index.md
       data.config = fileMap['index.md']?.frontmatter || {};
@@ -99,7 +109,7 @@ export async function load(evt: LoadEvent) {
           navlink.submenu.text ??= navlink.text;
           navlink.submenu.href ??= navlink.href;
           data.submenuMap[navlink.submenu.href] = navlink.submenu;
-          for (let i = 0; i < navlink.submenu.links?.length ?? 0; i++) {
+          for (let i = 0; i < (navlink.submenu.links?.length ?? 0); i++) {
             let file = fileMap[(navlink.submenu.links[i].href?.slice(1) ?? '') + '.md'];
             if (file) {
               let nextlink = navlink.submenu.links[i + 1] || navlink.submenu.links[0];
@@ -116,8 +126,8 @@ export async function load(evt: LoadEvent) {
       // populate sidebarMap with next/prev links
       data.config.sidebars?.forEach((sidebar) => {
         data.sidebarMap[sidebar.href] = sidebar;
-        for (let i = 0; i < sidebar.sections?.length ?? 0; i++) {
-          for (let j = 0; j < sidebar.sections[i].links?.length ?? 0; j++) {
+        for (let i = 0; i < (sidebar.sections?.length ?? 0); i++) {
+          for (let j = 0; j < (sidebar.sections[i].links?.length ?? 0); j++) {
             let file = fileMap[(sidebar.sections[i].links[j].href?.slice(1) ?? '') + '.md'];
             if (file) {
               let nextlink =
@@ -157,10 +167,12 @@ export async function load(evt: LoadEvent) {
 
   let path = evt.params.path || '';
   let pathprefix = '/' + path.split('/')[0];
+  let dirprefix = '/' + path.split('/').slice(0, -1).join('/');
 
   let content = data.fileMap[path + '.md'] || data.fileMap[path ? path + '/index.md' : 'index.md'];
   let sidebar = data.sidebarMap[pathprefix];
-  let dir = data.dirMap[pathprefix];
+  let dir = data.dirMap['/' + path] || data.dirMap[dirprefix];
+  // console.log('load path dir', path, dir?.length ?? 'none');
 
   let frontmatter = content?.frontmatter || {};
 

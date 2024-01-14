@@ -11,7 +11,7 @@ Links and icons in the main menu are configured in the frontmatter of `index.md`
 ```yaml
 icon:
   image: 💥
-  text: zaui
+  text: gitkitjs
 
 navlinks:
   - text: Guide
@@ -19,7 +19,7 @@ navlinks:
   - text: Blog
     href: /blog
   - text: GitHub
-    href: https://github.com/zeroasiccorp/zaui
+    href: https://github.com/gitkitjs/gitkitjs
     icon: GitHub
 ```
 

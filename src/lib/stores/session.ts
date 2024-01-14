@@ -18,7 +18,7 @@ export type Session = {
 };
 
 // https://dev.to/danawoodman/svelte-quick-tip-connect-a-store-to-local-storage-4idi
-const LSID = 'ZeroASIC';
+const LSID = 'gitkitjs';
 let initial: Session | undefined;
 
 if (browser) {

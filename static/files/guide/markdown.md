@@ -4,9 +4,9 @@ title: Markdown
 
 # Markdown
 
-Zaui uses [Markdoc](https://markdoc.dev/docs/syntax) which supports the [Commonmark](https://commonmark.org/) markdown specification.
+gitkitjs uses [Markdoc](https://markdoc.dev/docs/syntax) which supports the [Commonmark](https://commonmark.org/) markdown specification.
 
-See below for an example of rendered content. The source for this page can be viewed on [GitHub](https://github.com/zeroasiccorp/zaui/blob/main/static/files/guide/markdown.md?plain=1).
+See below for an example of rendered content. The source for this page can be viewed on [GitHub](https://github.com/gitkitjs/gitkitjs/blob/main/static/files/guide/markdown.md?plain=1).
 
 # Heading 1
 ## Heading 2

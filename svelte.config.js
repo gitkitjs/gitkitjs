@@ -1,5 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,21 +9,21 @@ const config = {
     alias: {
       // Points to directory with custom components
       // Results in path alias in .svelte-kit/tsconfig.json
-      $src: process.env.ZAUI_SRC_DIR || 'src',
+      $src: process.env.GITKITJS_SRC_DIR || 'src',
 
       // Points to directory with app.config.{js,ts}
       // This is to avoid conditional imports while supporting optional custom config.
       // Value is the same as $src only when an app.config.{js,ts} file is found.
       // If $src has no custom app.config, the fallback src/app.config.js will be used.
-      $appconfig: process.env.ZAUI_APPCONFIG_DIR || 'src',
+      $appconfig: process.env.GITKITJS_APPCONFIG_DIR || 'src',
     },
     files: {
       // Points to directory with static assets
-      // zaui.js creates temp dir with overlay of static + user-static + content dirs
-      assets: process.env.ZAUI_STATIC_DIR || 'static',
+      // gitkit.js creates temp dir with overlay of static + user-static + content dirs
+      assets: process.env.GITKITJS_STATIC_DIR || 'static',
     },
     adapter: adapter({
-      pages: process.env.ZAUI_BUILD_DIR || 'build',
+      pages: process.env.GITKITJS_BUILD_DIR || 'build',
       // https://kit.svelte.dev/docs/adapter-static#options-fallback
       fallback: '404.html',
       precompress: false,

@@ -1,6 +1,6 @@
 ---
-title: Zaui Example
-appurl: https://zaui-example.jldec.me
+title: gitkitjs Example
+appurl: https://gitkitjs-example.gitkitjs.dev
 mobilemenu: true
 usermenu: true
 
@@ -17,7 +17,7 @@ navlinks:
 fullwidth: true
 
 hero:
-  name: Zaui Example
+  name: gitkitjs Example
   text: Get started pronto
   tagline: With a custom layout
   icon: 😀

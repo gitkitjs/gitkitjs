@@ -8,14 +8,14 @@ The landing page design was inspired by [VitePress](https://vitepress.dev/) -- t
 
 Use `hero` and `features` in your index.md frontmatter to configure each section. Icon configuration follows the same pattern as in the [menus](menus). Note that `hero` looks best combined with `fullwidth: true`, which allows the layout to take up the full width of the window, with no padding or margins.
 
-Example from [here](https://github.com/zeroasiccorp/zaui/blob/main/static/files/index.md?plain=1). 
+Example from [here](https://github.com/gitkitjs/gitkitjs/blob/main/static/files/index.md?plain=1). 
 ![Landing page screenshot](images/landing-page.png)
 
 ### index.md
 
 ```yaml
 hero:
-  name: zaui
+  name: gitkitjs
   text: SvelteKit powered static site generator
   tagline: Generate a website from markdown with minimal fuss.
   icon: 💥
@@ -23,7 +23,7 @@ hero:
     - text: Quickstart
       link: /guide/quickstart
     - text: GitHub
-      link: https://github.com/zeroasiccorp/zaui
+      link: https://github.com/gitkitjs/gitkitjs
 
 fullwidth: true
 
