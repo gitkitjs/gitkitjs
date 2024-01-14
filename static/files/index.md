@@ -1,5 +1,5 @@
 ---
-appurl: https://gitkitjs.gitkitjs.dev
+appurl: https://gitkitjs.dev
 title: gitkitjs
 
 icon:
