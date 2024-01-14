@@ -23,7 +23,7 @@
 </script>
 
 <div class={sidebar ? 'md:ml-60' : ''}>
-  <div class={clsx(fullwidth ? '' : 'px-4 max-w-4xl mx-auto', config.pagetop ?? 'pt-8')}>
+  <div class={clsx(fullwidth ? '' : `px-4 max-w-4xl mx-auto ${config.pagetop ?? 'pt-8'}`)}>
     <div class={PROSE}>
       <slot />
     </div>
