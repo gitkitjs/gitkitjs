@@ -18,8 +18,8 @@ let binDir = path.resolve(__dirname, '..', 'node_modules', '.bin');
 let viteFile = path.resolve(binDir, 'vite');
 
 if (!fs.existsSync(viteFile)) {
-  // Try npm 7+ layout
-  let binDir2 = path.resolve(__dirname, '..', '..', '.bin');
+  // Try npm layout
+  let binDir2 = path.resolve(__dirname, '..', '..', '..', '.bin');
   viteFile = path.resolve(binDir2, 'vite');
   if (!fs.existsSync(viteFile)) {
     console.error(`Could not find vite executable in ${binDir} or ${binDir2}`);
