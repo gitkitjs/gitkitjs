@@ -1,14 +1,14 @@
 ---
 appurl: https://gitkitjs.dev
 title: gitkitjs
+favicon: images/favicon.png
+twitter: '@gitkitjs'
+mobilemenu: false
+fullwidth: true
 
 icon:
   image: 💥
   text: gitkitjs
-
-mobilemenu: false
-
-favicon: images/favicon.png
 
 hero:
   name: gitkitjs
@@ -20,8 +20,6 @@ hero:
       href: /guide/quickstart
     - text: GitHub
       href: https://github.com/gitkitjs/gitkitjs
-
-fullwidth: true
 
 features:
   - icon: 🍏
@@ -58,6 +56,9 @@ navlinks:
     href: /guide
   - text: Blog
     href: /blog
+  - href: https://twitter.com/gitkitjs
+    icon: Twitter
+    text: Twitter
   - text: GitHub
     href: https://github.com/gitkitjs/gitkitjs
     icon: GitHub

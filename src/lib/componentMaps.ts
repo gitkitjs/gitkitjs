@@ -30,6 +30,7 @@ import Lightbulb from './components/icons/Lightbulb.svelte';
 import LinkedIn from './components/icons/LinkedIn.svelte';
 import Menu from './components/icons/Menu.svelte';
 import MessageSquareWarning from './components/icons/MessageSquareWarning.svelte';
+import Twitter from './components/icons/Twitter.svelte';
 import User from './components/icons/User.svelte';
 import UserCheck from './components/icons/UserCheck.svelte';
 import Users from './components/icons/Users.svelte';
@@ -78,6 +79,7 @@ export let icons: App.ComponentMap = {
   LinkedIn,
   Menu,
   MessageSquareWarning,
+  Twitter,
   User,
   UserCheck,
   Users,
