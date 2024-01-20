@@ -14,19 +14,17 @@ See [jldec.me](https://github.com/jldec/jldec.me/) for an example.
 
 The built-in prism.js highlighter is configured for a limited number of languages, and a dark themed stylesheet. The list of languages appears in the comment at the top of [/prism.js](https://github.com/gitkitjs/gitkitjs/blob/main/static/prism.js) 
 
-Here is an example of a yaml code block from [/blog/announcing-gitkitjs](/blog/announcing-gitkitjs).
+Here is an example of a yaml code block from [/blog/hello-gitkitjs](/blog/hello-gitkitjs).
 
 ```yaml
-title: gitkitjs, our npm-installable SvelteKit toolchain
-author: Jürgen Leschner
+title: Hello gitkitjs
+author: jldec
 splash:
-  image: images/daisy.jpg
+  image: images/sunrise-deansgrange.webp
 date: 2024-01-14
 excerpt: |
-  We are pleased to announce the open source release of [gitkitjs](https://github.com/gitkitjs/gitkitjs), our npm-installable SvelteKit toolchain for building websites from markdown.
+  I am pleased to announce the open source release of [gitkitjs](https://github.com/gitkitjs/gitkitjs), the npm-installable SvelteKit toolchain for building websites from markdown.
 ```
-
-
 
 You can download your own prism.js with a different selection of languages, or your own prism.css stylesheet, at [prismjs.com/download](https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+bash+go+json+markdown+python+rust+typescript+yaml).
 

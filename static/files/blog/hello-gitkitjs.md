@@ -1,18 +1,18 @@
 ---
-title: Announcing gitkitjs
+title: Hello gitkitjs
 author: jldec
 splash:
-  image: images/daisy.jpg
+  image: images/sunrise-deansgrange.webp
 date: 2024-01-14
 excerpt: |
   I am pleased to announce the open source release of [gitkitjs](https://github.com/gitkitjs/gitkitjs), the npm-installable SvelteKit toolchain for building websites from markdown.
 ---
 
-# Announcing gitkitjs
+# Hello gitkitjs
 
 I am pleased to announce [gitkitjs](https://github.com/gitkitjs/gitkitjs), the npm-installable SvelteKit toolchain for building websites from markdown.
 
-Gitkitjs is a continuation of the [zaui](https://zaui.zeroasic.com) project, which powers [zeroasic.com/emulation](https://www.zeroasic.com/emulation).
+Gitkitjs is a friendly continuation of the [zaui](https://zaui.zeroasic.com) project, which powers [zeroasic.com/emulation](https://www.zeroasic.com/emulation).
 
 ### Quickstart
 
@@ -33,6 +33,6 @@ If you don't already have a `content` directory you will see the [gitkitjs guide
 - Static publishing using the SvelteKit [static adapter](https://kit.svelte.dev/docs/adapter-static).
 - TypeScript
 
-Thank you to all the contributors in those communities. 🙏
+Thank you to Zero ASIC and all the contributors in those communities. 🙏
 
 To find out more, visit the [gitkitjs](https://github.com/gitkitjs/gitkitjs) repo on GitHub or check out the [guide](https://gitkitjs.dev/guide/quickstart).
