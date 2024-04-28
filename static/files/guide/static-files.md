@@ -14,7 +14,7 @@ See [jldec.me](https://github.com/jldec/jldec.me/) for an example.
 
 The built-in prism.js highlighter is configured for a limited number of languages, and a dark themed stylesheet. The list of languages appears in the comment at the top of [/prism.js](https://github.com/gitkitjs/gitkitjs/blob/main/static/prism.js) 
 
-Here is an example of a yaml code block from [/blog/hello-gitkitjs](/blog/hello-gitkitjs).
+Here is an example of a yaml codeblock from [/blog/hello-gitkitjs](/blog/hello-gitkitjs).
 
 ```yaml
 title: Hello gitkitjs

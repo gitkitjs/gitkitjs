@@ -47,7 +47,7 @@ features:
     details: Nice navigation for docs, works on mobile too.
     href: /guide/sidebars
   - icon: 🍎
-    text: Syntax highlighting for code blacks
+    text: Syntax highlighting for codeblocks
     details: Add your own prism languages.
     href: /guide/static-files
 

@@ -30,6 +30,7 @@ export async function load(evt: LoadEvent) {
       dirMap: {},
       submenuMap: {},
       sidebarMap: {},
+      typeMap: {},
       status: '',
       appConfig,
     };
@@ -55,6 +56,7 @@ export async function load(evt: LoadEvent) {
       // populate fileMap and dirMap
       let fileMap: { [key: string]: MarkdownFile } = {};
       let dirMap: { [key: string]: MarkdownFile[] } = {};
+      let typeMap: { [key: string]: MarkdownFile[] } = {};
       mdData.forEach((file) => {
         fileMap[file.filepath] = file;
         let names = file.filepath.split('/');
@@ -63,6 +65,8 @@ export async function load(evt: LoadEvent) {
           prefix += '/' + names.shift();
           dirMap[prefix] = []; // e.g. dirMap['/blog'] = []
         }
+        typeMap[file.frontmatter?.type] ??= [];
+        typeMap[file.frontmatter?.type].push(file);
       });
       // console.log('fileMap', Object.keys(fileMap));
 
@@ -150,6 +154,7 @@ export async function load(evt: LoadEvent) {
 
       data.fileMap = fileMap;
       data.dirMap = dirMap;
+      data.typeMap = typeMap;
       data.status = `${new Date().toISOString()} loaded ${loadlist.length} files (${
         Date.now() - tstart
       } ms)`;
@@ -202,9 +207,8 @@ async function getMarkdown(filepath: string, evt: LoadEvent, prefix = '/files/')
         data.yamlError = '' + err;
         if (building) throw err;
       }
-    } else {
-      data.frontmatter = {};
     }
+    data.frontmatter = data.frontmatter ?? {};
 
     data.byline = [data.frontmatter?.author ?? '', formatDate(data.frontmatter?.date)]
       .filter(Boolean)

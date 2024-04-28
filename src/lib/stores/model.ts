@@ -101,6 +101,7 @@ export type MarkdownFiles = {
   files: Array<string>;
   fileMap: { [key: string]: MarkdownFile };
   dirMap: { [key: string]: Array<MarkdownFile> };
+  typeMap: { [key: string]: Array<MarkdownFile> };
   submenuMap: { [key: string]: Submenu };
   sidebarMap: { [key: string]: Sidebar };
   status: string;

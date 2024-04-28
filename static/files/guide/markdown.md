@@ -66,7 +66,7 @@ Things were not too simple in this _safari_ because things had changed very much
 |REQ_RD      |    |Y |Y |HOSTID|U    |EX,EOF,EOM|PROT |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |
 |REQ_WR      |Y   |Y |Y |HOSTID|U    |EX,EOF,EOM|PROT |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |QOS  |LEN  |
 
-### Javascript code block
+### Javascript codeblock
 ```js
 let defaultTheme = require('tailwindcss/defaultTheme');
 
@@ -91,7 +91,7 @@ let config = {
 };
 ```
 
-### Typescript code block
+### Typescript codeblock
 ```ts
 import { writable } from 'svelte/store';
 import type { LoadData } from '$lib/loader';
@@ -108,7 +108,7 @@ export type MarkdownFiles = {
 export const model = writable<MarkdownFiles>();
 ```
 
-### Python code block
+### Python codeblock
 ```py
 import sys
 

@@ -17,7 +17,7 @@
     'prose-headings:font-display prose-headings:font-normal',
     'prose-a:font-normal prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline prose-a:dark:text-sky-400',
     'prose-li:my-1',
-    // Avoid changing code blocks styles by prefixing prose-code: with [&:not(.pre)]: - see Codeblock.svelte
+    // Avoid changing codeblock styles by prefixing prose-code: with [&:not(.pre)]: - see Codeblock.svelte
     '[&:not(.pre)]:prose-code:px-[3px] [&:not(.pre)]:prose-code:py-[2px] [&:not(.pre)]:prose-code:rounded prose-code:font-normal prose-code:before:content-none prose-code:after:content-none [&:not(.pre)]:prose-code:dark:text-slate-200 [&:not(.pre)]:prose-code:text-slate-500 [&:not(.pre)]:prose-code:bg-slate-100 [&:not(.pre)]:prose-code:dark:bg-slate-700/60'
   );
 </script>
