@@ -1,7 +1,7 @@
 {
   "name": "@gitkitjs/gitkitjs",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.10",
     "autoprefixer": "^10.4.16",
     "clsx": "^2.1.0",
     "fast-glob": "^3.3.2",
