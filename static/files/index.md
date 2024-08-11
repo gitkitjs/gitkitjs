@@ -53,7 +53,7 @@ features:
 
 navlinks:
   - text: Guide
-    href: /guide
+    href: /guide/quickstart
   - text: Blog
     href: /blog
   - href: https://twitter.com/gitkitjs
