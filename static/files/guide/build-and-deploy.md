@@ -8,4 +8,4 @@ title: Build and Deploy
 
 This can be used for deployment automation e.g. on Cloudflare Pages:
 
-![Cloudflare build configuration](images/cloudflare-build-config.png)
+![Cloudflare build configuration](images/cloudflare-build.png)

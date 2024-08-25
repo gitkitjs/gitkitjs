@@ -38,15 +38,13 @@ icon:
 
 Navlinks will be collapsed behind a "hamburger" menu on small screens. To turn this off, set `mobilemenu: false`.
 
-![mobile menu collapsed screenshot](images/mobile-menu.png)
-
-![mobile menu expanded screenshot](images/mobile-sub-menu.png)
+![mobile menu collapsed screenshot](images/mobile.png)
 
 ## Sub-menus
 
 Nested `submenu` links will be expanded horizontally under the main menu bar. E.g.
 
-![sub-menu mobile screenshot](images/sub-menu.png)
+![sub-menu mobile screenshot](images/za-sub-menu.png)
 
 ```yaml
   - href: /chiplets
