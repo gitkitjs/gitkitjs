@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import { appComponents } from '$lib/componentMaps';
   import { fixlink } from '$lib/fixlink';
   import LoginDialog from '$lib/components/LoginDialog.svelte';
@@ -14,6 +15,9 @@
 <svelte:head>
   <script src="/prism.js" defer></script>
   <link rel="icon" href="{config?.favicon ? fixlink(config?.favicon) : '/favicon.jpg' }" />
+  {#if config.appurl}
+    <link rel="canonical" href={config.appurl + $page.url.pathname} />
+  {/if}
 </svelte:head>
 
 <LoginDialog {config} />

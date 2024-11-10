@@ -1,7 +1,7 @@
 {
   "name": "@gitkitjs/gitkitjs",
   "type": "module",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "repository": {
     "type": "git",
